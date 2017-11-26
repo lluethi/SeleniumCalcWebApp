@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Webseite mit Berechnungsformular</title>
+    </h:head>
+    <h:body>
+        <h2>Webseite mit Berechnungsformular</h2>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Wert1" />
+                <h:inputText id="value1" value="#{berechnungsViewController.value1}"/>
+                <h:outputText value="Wert2" />
+                <h:inputText id="value2" value="#{berechnungsViewController.value2}"/>
+                <h:outputText value="" />
+                <h:commandButton styleClass="button" action="#{berechnungsViewController.berechne}" value="berechne"/>
+                <h:outputText value="Resultat=" />
+                <div id="result"><h:outputText value="#{berechnungsViewController.result}" /></div>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
